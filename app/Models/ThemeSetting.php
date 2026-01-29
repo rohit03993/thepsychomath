@@ -15,6 +15,7 @@ class ThemeSetting extends Model
         // Logo
         'logo_path',
         'logo_alt_text',
+        'show_portfolio',
         // Core colors
         'primary_color',
         'secondary_color',
@@ -52,6 +53,7 @@ class ThemeSetting extends Model
 
     protected $casts = [
         'is_active' => 'boolean',
+        'show_portfolio' => 'boolean',
     ];
 
     /**

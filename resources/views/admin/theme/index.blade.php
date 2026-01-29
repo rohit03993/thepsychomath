@@ -305,6 +305,21 @@
                             </div>
                         </div>
 
+                        <!-- Homepage sections -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5 class="mb-0"><i class="bi bi-layout-text-sidebar me-2"></i>Homepage Sections</h5>
+                                <small class="text-muted">Show or hide sections on the homepage</small>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="show_portfolio" name="show_portfolio" value="1" {{ ($theme->show_portfolio ?? true) ? 'checked' : '' }}>
+                                    <label class="form-check-label" for="show_portfolio">Show Portfolio section on homepage</label>
+                                </div>
+                                <small class="text-muted d-block mt-1">When off, the Portfolio / gallery block is hidden completely.</small>
+                            </div>
+                        </div>
+
                         <div class="d-flex gap-2">
                             <button type="submit" class="btn btn-primary btn-lg">
                                 <i class="bi bi-check-lg me-1"></i> Save Theme Settings

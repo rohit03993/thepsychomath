@@ -1,6 +1,13 @@
 @extends('admin.layout')
 
 @section('content')
+@if(session('success'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ session('success') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
+
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2>Portfolio / Gallery</h2>
     <div class="d-flex gap-2">
@@ -10,6 +17,19 @@
         <a href="{{ route('admin.portfolio.create') }}" class="btn btn-primary">
             <i class="bi bi-plus-circle"></i> Add New Portfolio Item
         </a>
+    </div>
+</div>
+
+<div class="card mb-4 border-secondary">
+    <div class="card-body py-3">
+        <form action="{{ route('admin.portfolio.toggle-homepage') }}" method="POST" class="d-flex align-items-center gap-3 flex-wrap">
+            @csrf
+            <div class="form-check form-switch mb-0">
+                <input class="form-check-input" type="checkbox" id="showOnHomepage" name="show_portfolio" value="1" {{ $showOnHomepage ? 'checked' : '' }} onchange="this.form.submit()">
+                <label class="form-check-label" for="showOnHomepage">Show Portfolio section on homepage</label>
+            </div>
+            <small class="text-muted">When off, the section is hidden on the homepage even if you have no items.</small>
+        </form>
     </div>
 </div>
 
@@ -75,9 +95,7 @@
         </div>
     @endforeach
 @else
-    <div class="alert alert-info">
-        <p>No categories found. <a href="{{ route('admin.portfolio.categories.create') }}">Create your first category</a> to get started.</p>
-    </div>
+    <p class="text-muted small mb-0">No categories yet. Use <a href="{{ route('admin.portfolio.categories.index') }}">Manage Categories</a> or <a href="{{ route('admin.portfolio.categories.create') }}">create one</a>.</p>
 @endif
 
 @if(isset($orphanedItems) && $orphanedItems->count() > 0)

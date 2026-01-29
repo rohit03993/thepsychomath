@@ -69,6 +69,7 @@ Route::prefix('admin')->group(function () {
         
             // Portfolio Routes
             Route::get('/portfolio', [\App\Http\Controllers\Admin\PortfolioController::class, 'index'])->name('admin.portfolio.index');
+            Route::post('/portfolio/toggle-homepage', [\App\Http\Controllers\Admin\PortfolioController::class, 'toggleHomepageVisibility'])->name('admin.portfolio.toggle-homepage');
             Route::get('/portfolio/create', [\App\Http\Controllers\Admin\PortfolioController::class, 'create'])->name('admin.portfolio.create');
             Route::post('/portfolio', [\App\Http\Controllers\Admin\PortfolioController::class, 'store'])->name('admin.portfolio.store');
             Route::get('/portfolio/{id}/edit', [\App\Http\Controllers\Admin\PortfolioController::class, 'edit'])->name('admin.portfolio.edit');

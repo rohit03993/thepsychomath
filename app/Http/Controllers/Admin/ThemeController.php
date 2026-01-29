@@ -50,6 +50,7 @@ class ThemeController extends Controller
             'hero_text' => 'nullable|string|regex:/^#[0-9A-Fa-f]{6}$/',
             'hero_gradient_start' => 'nullable|string|regex:/^#[0-9A-Fa-f]{6}$/',
             'hero_gradient_end' => 'nullable|string|regex:/^#[0-9A-Fa-f]{6}$/',
+            'show_portfolio' => 'boolean',
         ]);
 
         // Get or create the active theme
@@ -60,8 +61,9 @@ class ThemeController extends Controller
             $theme->is_active = true;
         }
 
-        // Update with validated data
+        unset($validated['show_portfolio']);
         $theme->fill($validated);
+        $theme->show_portfolio = $request->boolean('show_portfolio');
         $theme->save();
 
         return redirect()->route('admin.theme.index')

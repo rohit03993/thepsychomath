@@ -490,7 +490,8 @@
     </div>
 </section>
 
-<!-- ======= Gallery Section ======= -->
+<!-- ======= Gallery Section (optional: hide via Admin → Theme → Homepage Sections) ======= -->
+@if(($themePortfolio = \App\Models\ThemeSetting::getActive()) === null || $themePortfolio->getAttribute('show_portfolio') !== false)
 <section id="portfolio" class="portfolio">
     <div class="container" data-aos="fade-up">
         <div class="section-title">
@@ -656,6 +657,7 @@
         </div>
     </div>
 </section>
+@endif
 
 <!-- ======= Testimonials Section ======= -->
 <section id="testimonials" class="testimonials section-bg">

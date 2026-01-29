@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\PortfolioItem;
 use App\Models\PortfolioCategory;
+use App\Models\ThemeSetting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -25,8 +26,10 @@ class PortfolioController extends Controller
             ->orWhereNotIn('portfolio_category_id', PortfolioCategory::pluck('id'))
             ->orderBy('order')
             ->get();
+
+        $showOnHomepage = optional(ThemeSetting::getActive())->getAttribute('show_portfolio') !== false;
         
-        return view('admin.portfolio.index', compact('categories', 'orphanedItems'));
+        return view('admin.portfolio.index', compact('categories', 'orphanedItems', 'showOnHomepage'));
     }
 
     /**
@@ -164,5 +167,23 @@ class PortfolioController extends Controller
 
         return redirect()->route('admin.portfolio.index')
             ->with('success', 'Portfolio item deleted successfully!');
+    }
+
+    /**
+     * Toggle whether the Portfolio section is shown on the homepage (even when empty).
+     */
+    public function toggleHomepageVisibility(Request $request)
+    {
+        $theme = ThemeSetting::getActive();
+        if (!$theme) {
+            $theme = new ThemeSetting();
+            $theme->is_active = true;
+            $theme->save();
+        }
+        $theme->show_portfolio = $request->boolean('show_portfolio');
+        $theme->save();
+
+        return redirect()->route('admin.portfolio.index')
+            ->with('success', $theme->show_portfolio ? 'Portfolio section is now visible on the homepage.' : 'Portfolio section is now hidden on the homepage.');
     }
 }

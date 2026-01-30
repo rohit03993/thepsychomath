@@ -134,8 +134,9 @@ a {
 @media (max-width: 992px) {
   #header .container {
     flex-wrap: nowrap;
-    gap: 15px;
+    gap: 10px;
     justify-content: space-between;
+    overflow: visible !important;
   }
   
   #header .logo {
@@ -145,7 +146,17 @@ a {
   }
   
   #header .get-started-btn {
-    display: none !important;
+    order: 3 !important;
+    flex-shrink: 0 !important;
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    align-items: center;
+    padding: 8px 14px;
+    font-size: 13px;
+    white-space: nowrap;
+    position: relative;
+    z-index: 10001;
   }
   
   /* Hide navbar by default on mobile, but show when navbar-mobile class is added */
@@ -180,12 +191,16 @@ a {
 }
 
 #header .logo .logo-text-fallback {
-  color: #fff;
+  background: #ffffff !important;
+  color: #333333 !important;
   font-size: 24px;
   font-weight: 700;
   text-decoration: none;
   display: none;
   line-height: 60px;
+}
+#header .logo .logo-text-fallback span {
+  color: #333333 !important;
 }
 
 #header .logo a {
@@ -200,6 +215,11 @@ a {
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease;
+  /* White circle so logo is visible on teal/dark header */
+  background: #ffffff !important;
+}
+#header .logo .logo-circle span {
+  color: #333333 !important;
 }
 
 #header .logo a:hover .logo-circle {
@@ -390,7 +410,22 @@ a {
   transform: rotate(90deg);
 }
 
-/* Call Now Button */
+/* Call Now Button - white on header for visibility on teal/dark */
+#header .get-started-btn {
+  background: #ffffff;
+  color: #333333;
+  border: 2px solid #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
+#header .get-started-btn:hover {
+  background: #f0f0f0;
+  border-color: #f0f0f0;
+  color: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
 .get-started-btn {
   background: var(--primary-color);
   color: var(--button-text);
@@ -2722,13 +2757,19 @@ section {
   }
 }
 
-/* Ensure mobile hamburger is always visible on mobile */
+/* Ensure mobile hamburger and Call Now are visible on mobile */
 @media (max-width: 992px) {
   .mobile-nav-toggle {
     display: flex !important;
     visibility: visible !important;
     opacity: 1 !important;
     z-index: 10002 !important;
+    pointer-events: auto !important;
+  }
+  #header .get-started-btn {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
     pointer-events: auto !important;
   }
 }

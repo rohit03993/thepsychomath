@@ -104,13 +104,10 @@
         </button>
         @php
             $contactInfo = \App\Models\ContactInfo::where('is_active', true)->first();
-            $phoneNumber = $contactInfo && $contactInfo->phone ? $contactInfo->phone : '+916396292221';
-            // Ensure phone number starts with tel: protocol
-            if (!str_starts_with($phoneNumber, 'tel:')) {
-                $phoneNumber = 'tel:' . $phoneNumber;
-            }
+            $phoneRaw = $contactInfo && $contactInfo->phone ? trim($contactInfo->phone) : '+916396292221';
+            $phoneForTel = 'tel:' . preg_replace('/\s+/', '', ltrim($phoneRaw, 'tel:'));
         @endphp
-        <a href="{{ $phoneNumber }}" class="get-started-btn scrollto">Call Now</a>
+        <a href="{{ $phoneForTel }}" class="get-started-btn scrollto" aria-label="Call us">Call Now</a>
     </div>
 </header>
 

@@ -75,6 +75,19 @@
       @media (min-width: 993px) {
         .mobile-nav-toggle { display: none !important; }
       }
+      /* Call Now: always visible on mobile, no overlap */
+      @media (max-width: 992px) {
+        #header .get-started-btn {
+          display: inline-flex !important;
+          visibility: visible !important;
+          opacity: 1 !important;
+          position: relative !important;
+          z-index: 10001 !important;
+          flex-shrink: 0 !important;
+          order: 3 !important;
+        }
+        #header .container { overflow: visible !important; }
+      }
     </style>
 
     @stack('styles')

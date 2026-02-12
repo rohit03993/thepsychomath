@@ -1,11 +1,16 @@
 @extends('admin.layout')
 
 @section('content')
-<div class="d-flex justify-content-between align-items-center mb-4">
+<div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
     <h2>Career Library</h2>
-    <a href="{{ route('careers.index') }}" target="_blank" class="btn btn-info">
-        <i class="bi bi-eye"></i> View on Site
-    </a>
+    <div class="d-flex gap-2">
+        <a href="{{ route('admin.careers.create') }}" class="btn btn-primary">
+            <i class="bi bi-plus-circle"></i> Add New Career
+        </a>
+        <a href="{{ route('careers.index') }}" target="_blank" class="btn btn-info">
+            <i class="bi bi-eye"></i> View on Site
+        </a>
+    </div>
 </div>
 
 @if(session('success'))
@@ -41,12 +46,21 @@
                                     </span>
                                 </td>
                                 <td>
-                                    <a href="{{ route('admin.careers.edit', $career->id) }}" class="btn btn-sm btn-primary">
-                                        <i class="bi bi-pencil"></i> Edit
-                                    </a>
-                                    <a href="{{ route('careers.show', $career->slug) }}" target="_blank" class="btn btn-sm btn-info">
-                                        <i class="bi bi-eye"></i> View
-                                    </a>
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <a href="{{ route('admin.careers.edit', $career->id) }}" class="btn btn-primary">
+                                            <i class="bi bi-pencil"></i> Edit
+                                        </a>
+                                        <a href="{{ route('careers.show', $career->slug) }}" target="_blank" class="btn btn-info">
+                                            <i class="bi bi-eye"></i> View
+                                        </a>
+                                        <form action="{{ route('admin.careers.destroy', $career->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Are you sure you want to delete {{ $career->title }}? This cannot be undone.');">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger">
+                                                <i class="bi bi-trash"></i> Delete
+                                            </button>
+                                        </form>
+                                    </div>
                                 </td>
                             </tr>
                         @endforeach

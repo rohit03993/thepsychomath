@@ -129,8 +129,11 @@ Route::prefix('admin')->group(function () {
 
             // Career Library Routes
             Route::get('/careers', [\App\Http\Controllers\Admin\CareerController::class, 'index'])->name('admin.careers.index');
+            Route::get('/careers/create', [\App\Http\Controllers\Admin\CareerController::class, 'create'])->name('admin.careers.create');
+            Route::post('/careers', [\App\Http\Controllers\Admin\CareerController::class, 'store'])->name('admin.careers.store');
             Route::get('/careers/{id}/edit', [\App\Http\Controllers\Admin\CareerController::class, 'edit'])->name('admin.careers.edit');
             Route::put('/careers/{id}', [\App\Http\Controllers\Admin\CareerController::class, 'update'])->name('admin.careers.update');
+            Route::delete('/careers/{id}', [\App\Http\Controllers\Admin\CareerController::class, 'destroy'])->name('admin.careers.destroy');
 
             // Theme Settings Routes
             Route::get('/theme', [\App\Http\Controllers\Admin\ThemeController::class, 'index'])->name('admin.theme.index');

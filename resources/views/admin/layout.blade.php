@@ -84,6 +84,9 @@
                     <a href="{{ route('admin.careers.index') }}" class="{{ request()->routeIs('admin.careers.*') ? 'active' : '' }}">
                         <i class="bi bi-journal-bookmark"></i> Career Library
                     </a>
+                    <a href="{{ route('admin.menu.index') }}" class="{{ request()->routeIs('admin.menu.*') ? 'active' : '' }}">
+                        <i class="bi bi-list-ul"></i> Menu Management
+                    </a>
                     <a href="{{ route('admin.test-bookings.index') }}" class="{{ request()->routeIs('admin.test-bookings.*') ? 'active' : '' }}">
                         <i class="bi bi-calendar-check"></i> Test Bookings
                     </a>

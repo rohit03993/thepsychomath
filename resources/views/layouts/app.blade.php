@@ -75,16 +75,12 @@
       @media (min-width: 993px) {
         .mobile-nav-toggle { display: none !important; }
       }
-      /* Call Now: always visible on mobile, no overlap */
+      /* Call Now: hidden on mobile */
       @media (max-width: 992px) {
         #header .get-started-btn {
-          display: inline-flex !important;
-          visibility: visible !important;
-          opacity: 1 !important;
-          position: relative !important;
-          z-index: 10001 !important;
-          flex-shrink: 0 !important;
-          order: 3 !important;
+          display: none !important;
+          visibility: hidden !important;
+          opacity: 0 !important;
         }
         #header .container { overflow: visible !important; }
       }
@@ -199,6 +195,12 @@
     @include('partials.footer')
 
     <!-- Preloader - Completely removed -->
+    @php
+        $contactInfo = \App\Models\ContactInfo::where('is_active', true)->first();
+        $phoneRaw = $contactInfo && $contactInfo->phone ? trim($contactInfo->phone) : '+916396292221';
+        $phoneForTel = 'tel:' . preg_replace('/\s+/', '', ltrim($phoneRaw, 'tel:'));
+    @endphp
+    <a href="{{ $phoneForTel }}" class="call-now-btn d-flex align-items-center justify-content-center" aria-label="Call us"><i class="bi bi-telephone-fill"></i></a>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- Force page to signal loaded - Don't wait for external resources -->

@@ -143,5 +143,14 @@ Route::prefix('admin')->group(function () {
             Route::post('/theme/preview', [\App\Http\Controllers\Admin\ThemeController::class, 'preview'])->name('admin.theme.preview');
             Route::post('/theme/logo', [\App\Http\Controllers\Admin\ThemeController::class, 'uploadLogo'])->name('admin.theme.logo.upload');
             Route::delete('/theme/logo', [\App\Http\Controllers\Admin\ThemeController::class, 'removeLogo'])->name('admin.theme.logo.remove');
+
+            // Menu Management Routes
+            Route::get('/menu', [\App\Http\Controllers\Admin\MenuController::class, 'index'])->name('admin.menu.index');
+            Route::get('/menu/create', [\App\Http\Controllers\Admin\MenuController::class, 'create'])->name('admin.menu.create');
+            Route::post('/menu', [\App\Http\Controllers\Admin\MenuController::class, 'store'])->name('admin.menu.store');
+            Route::get('/menu/{id}/edit', [\App\Http\Controllers\Admin\MenuController::class, 'edit'])->name('admin.menu.edit');
+            Route::put('/menu/{id}', [\App\Http\Controllers\Admin\MenuController::class, 'update'])->name('admin.menu.update');
+            Route::delete('/menu/{id}', [\App\Http\Controllers\Admin\MenuController::class, 'destroy'])->name('admin.menu.destroy');
+            Route::post('/menu/reorder', [\App\Http\Controllers\Admin\MenuController::class, 'reorder'])->name('admin.menu.reorder');
     });
 });

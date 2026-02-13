@@ -234,6 +234,270 @@ class CareerSeeder extends Seeder
                 'who_can_pursue' => 'Class 12 (Commerce or Science with Maths). Interest in current affairs, numbers, and logic. Higher studies improve prospects.',
                 'what_you_get' => 'Economist, analyst, or researcher roles in policy, finance, or academia, with scope for influence and growth.',
             ],
+            [
+                'title' => 'Social Sciences & Humanities',
+                'slug' => 'social-sciences-humanities',
+                'order' => 15,
+                'short_description' => 'Study human society, culture, history, and behaviour through various disciplines.',
+                'content' => 'Social Sciences & Humanities encompass sociology, anthropology, history, philosophy, literature, and cultural studies. Graduates work in research, education, media, policy, and social development.
+
+Educational paths: B.A. in Sociology, History, Philosophy, Literature, or Anthropology; M.A. / M.Phil. / Ph.D. for advanced research; certifications in social work or development.
+
+Top recruiters: Universities, research institutions, NGOs, government departments, media houses, publishing, and think tanks.
+
+Trending areas: Digital humanities, social policy research, and cultural heritage management.',
+                'features' => [
+                    'Broad understanding of human society',
+                    'Research, teaching, and policy roles',
+                    'Foundation for civil services and social work',
+                    'Critical thinking and analytical skills',
+                ],
+                'scope' => 'Academia, research, NGOs, government policy, media, publishing, and cultural institutions. Growing focus on evidence-based policy.',
+                'who_can_pursue' => 'Class 12 (any stream). Interest in reading, writing, and understanding society. Humanities background preferred.',
+                'what_you_get' => 'Researcher, teacher, policy analyst, or social worker roles with opportunities in academia and development sectors.',
+            ],
+            [
+                'title' => 'Social Services',
+                'slug' => 'social-services',
+                'order' => 16,
+                'short_description' => 'Help individuals, families, and communities overcome challenges and improve well-being.',
+                'content' => 'Social services professionals work with vulnerable populations—children, elderly, disabled, and marginalised communities. They provide counselling, support, and advocacy.
+
+Educational paths: B.S.W. / M.S.W. (Social Work); B.A. / M.A. in Social Work or Sociology; Diploma in Child Welfare or Disability Studies; certifications in counselling.
+
+Top recruiters: NGOs, government departments (Women & Child, Social Welfare), hospitals, schools, rehabilitation centres, and international organisations.
+
+Trending areas: Mental health support, child protection, elderly care, and community development.',
+                'features' => [
+                    'Meaningful work impacting lives',
+                    'Diverse settings—NGOs, hospitals, schools',
+                    'Growing awareness and funding',
+                    'Foundation for social entrepreneurship',
+                ],
+                'scope' => 'NGOs, government schemes, hospitals, schools, rehabilitation centres, and community organisations. CSR and government spending drive demand.',
+                'who_can_pursue' => 'Class 12 (any stream). Empathy, communication skills, and commitment to social causes. B.S.W. / M.S.W. preferred.',
+                'what_you_get' => 'Social worker, counsellor, or community organiser roles with opportunities to lead programmes and drive social change.',
+            ],
+            [
+                'title' => 'Education & Training',
+                'slug' => 'education-training',
+                'order' => 17,
+                'short_description' => 'Teach, train, and develop learning programmes for students and professionals.',
+                'content' => 'Education and training professionals teach in schools, colleges, and training centres. They design curricula, assess learning, and support student development.
+
+Educational paths: B.Ed. / M.Ed.; B.A. / M.A. in Education; B.Sc. / M.Sc. with B.Ed.; Ph.D. for higher education; certifications in special education or online teaching.
+
+Top recruiters: Schools (K-12), colleges, universities, coaching centres, ed-tech companies, and corporate training departments.
+
+Trending areas: Ed-tech, online teaching, special needs education, and skill-based training aligned with NEP.',
+                'features' => [
+                    'Stable careers with holidays and benefits',
+                    'Impact on student lives and society',
+                    'Options in schools, colleges, and ed-tech',
+                    'Growing demand for quality teachers',
+                ],
+                'scope' => 'Schools, colleges, coaching institutes, ed-tech platforms, corporate training, and government education departments.',
+                'who_can_pursue' => 'Graduation in any subject; B.Ed. required for school teaching. Passion for teaching and patience with students.',
+                'what_you_get' => 'Teacher, lecturer, trainer, or curriculum developer roles with job security and opportunities for growth in education sector.',
+            ],
+            [
+                'title' => 'Distribution & Logistics',
+                'slug' => 'distribution-logistics',
+                'order' => 18,
+                'short_description' => 'Manage supply chains, warehousing, and distribution of goods and services.',
+                'content' => 'Logistics and distribution professionals ensure products reach customers efficiently. They manage inventory, transportation, warehousing, and supply chain operations.
+
+Educational paths: B.B.A. / M.B.A. in Logistics or Supply Chain; B.Tech. in Industrial Engineering; Diploma in Logistics; certifications (CSCP, CPIM).
+
+Top recruiters: E-commerce companies, logistics firms (Delhivery, Blue Dart), manufacturing, retail, and FMCG companies.
+
+Trending areas: E-commerce logistics, last-mile delivery, warehouse automation, and supply chain analytics.',
+                'features' => [
+                    'Critical for e-commerce and retail growth',
+                    'Operations and management focus',
+                    'Technology-driven optimisation',
+                    'Career progression to supply chain leadership',
+                ],
+                'scope' => 'E-commerce, logistics companies, manufacturing, retail, and FMCG. E-commerce boom drives massive hiring.',
+                'who_can_pursue' => 'Class 12 (any stream). Interest in operations, planning, and problem-solving. B.B.A. / M.B.A. or engineering background helps.',
+                'what_you_get' => 'Logistics coordinator, warehouse manager, or supply chain analyst roles with growth to senior operations positions.',
+            ],
+            [
+                'title' => 'Political Science',
+                'slug' => 'political-science',
+                'order' => 19,
+                'short_description' => 'Study political systems, governance, and public policy.',
+                'content' => 'Political science graduates study government, politics, and public policy. They work in research, journalism, civil services, think tanks, and political organisations.
+
+Educational paths: B.A. / M.A. in Political Science; M.Phil. / Ph.D. for research; certifications in public policy or international relations.
+
+Top recruiters: Universities, research institutions, media houses, political parties, government departments, and international organisations.
+
+Trending areas: Public policy analysis, electoral politics, international relations, and governance research.',
+                'features' => [
+                    'Foundation for civil services preparation',
+                    'Research and policy analysis roles',
+                    'Understanding of governance and democracy',
+                    'Pathway to journalism and public service',
+                ],
+                'scope' => 'Academia, research, journalism, civil services, think tanks, political consulting, and government advisory roles.',
+                'who_can_pursue' => 'Class 12 (any stream). Interest in current affairs, politics, and governance. Strong reading and analytical skills.',
+                'what_you_get' => 'Researcher, policy analyst, journalist, or civil servant roles with opportunities to influence public policy.',
+            ],
+            [
+                'title' => 'Culinary Arts',
+                'slug' => 'culinary-arts',
+                'order' => 20,
+                'short_description' => 'Master cooking, food preparation, and restaurant management.',
+                'content' => 'Culinary arts professionals work as chefs, food stylists, restaurant managers, and food consultants. They create menus, manage kitchens, and ensure food quality.
+
+Educational paths: Diploma in Culinary Arts or Hotel Management; B.Sc. / M.Sc. in Hospitality; certifications from culinary institutes; apprenticeships.
+
+Top recruiters: Hotels, restaurants, catering companies, cruise lines, food media, and food tech startups.
+
+Trending areas: Fusion cuisine, plant-based cooking, food photography, and cloud kitchens.',
+                'features' => [
+                    'Creative and hands-on career',
+                    'Global opportunities in hospitality',
+                    'Entrepreneurship possibilities',
+                    'Growing food and restaurant industry',
+                ],
+                'scope' => 'Hotels, restaurants, catering, cruise lines, food media, and food tech. Hospitality sector growth drives demand.',
+                'who_can_pursue' => 'Class 12 (any stream). Passion for cooking, creativity, and ability to work under pressure. Culinary training preferred.',
+                'what_you_get' => 'Chef, sous chef, or restaurant manager roles with potential to own restaurants or food businesses.',
+            ],
+            [
+                'title' => 'Psychology',
+                'slug' => 'psychology',
+                'order' => 21,
+                'short_description' => 'Study human mind, behaviour, and mental processes.',
+                'content' => 'Psychologists help people understand and improve mental health, behaviour, and relationships. They work in clinical, counselling, organisational, and research settings.
+
+Educational paths: B.A. / M.A. in Psychology; M.Phil. / Ph.D. for clinical practice; certifications in counselling or therapy; RCI registration for clinical practice.
+
+Top recruiters: Hospitals, clinics, schools, corporates (HR), NGOs, research institutions, and private practice.
+
+Trending areas: Mental health awareness, corporate wellness, child psychology, and online therapy.',
+                'features' => [
+                    'Growing awareness of mental health',
+                    'Diverse applications—clinical, corporate, research',
+                    'Helping people overcome challenges',
+                    'Private practice and employment options',
+                ],
+                'scope' => 'Clinical practice, hospitals, schools, corporates, NGOs, and research. Mental health awareness is increasing demand.',
+                'who_can_pursue' => 'Class 12 (any stream). Empathy, listening skills, and interest in human behaviour. M.A. Psychology and RCI registration for clinical practice.',
+                'what_you_get' => 'Clinical psychologist, counsellor, or HR psychologist roles with opportunities for private practice and research.',
+            ],
+            [
+                'title' => 'Geography',
+                'slug' => 'geography',
+                'order' => 22,
+                'short_description' => 'Study Earth\'s physical features, climate, and human-environment interactions.',
+                'content' => 'Geographers study physical landscapes, climate, human settlements, and spatial relationships. They work in GIS, urban planning, environmental management, and research.
+
+Educational paths: B.A. / B.Sc. / M.A. / M.Sc. in Geography; M.Phil. / Ph.D. for research; certifications in GIS or remote sensing.
+
+Top recruiters: Government departments (Survey of India, ISRO), urban planning agencies, environmental consultancies, and universities.
+
+Trending areas: GIS and remote sensing, climate change research, urban planning, and environmental conservation.',
+                'features' => [
+                    'Combines physical and human geography',
+                    'Applications in planning and environment',
+                    'Technology-driven (GIS, remote sensing)',
+                    'Research and applied career paths',
+                ],
+                'scope' => 'Government agencies, urban planning, environmental consultancies, research institutions, and GIS companies.',
+                'who_can_pursue' => 'Class 12 (any stream, Science preferred for B.Sc.). Interest in maps, environment, and spatial analysis.',
+                'what_you_get' => 'Geographer, GIS analyst, urban planner, or researcher roles with opportunities in government and private sectors.',
+            ],
+            [
+                'title' => 'Language',
+                'slug' => 'language',
+                'order' => 23,
+                'short_description' => 'Master languages for translation, interpretation, teaching, and communication.',
+                'content' => 'Language professionals work as translators, interpreters, language teachers, content writers, and linguists. They bridge communication gaps across cultures.
+
+Educational paths: B.A. / M.A. in Languages (English, Hindi, Foreign Languages); M.Phil. / Ph.D. in Linguistics; certifications in translation or interpretation.
+
+Top recruiters: Translation agencies, embassies, MNCs, schools, colleges, media houses, and publishing companies.
+
+Trending areas: Technical translation, interpretation services, online language teaching, and content localisation.',
+                'features' => [
+                    'Global communication and cultural exchange',
+                    'Teaching, translation, and content roles',
+                    'Freelance and remote work options',
+                    'Foundation for careers in media and diplomacy',
+                ],
+                'scope' => 'Translation, interpretation, teaching, content writing, publishing, and media. Globalisation increases demand.',
+                'who_can_pursue' => 'Class 12 (any stream). Strong language skills, interest in literature and culture. Proficiency in multiple languages is an advantage.',
+                'what_you_get' => 'Translator, interpreter, language teacher, or content writer roles with opportunities in education and global communication.',
+            ],
+            [
+                'title' => 'Museology',
+                'slug' => 'museology',
+                'order' => 24,
+                'short_description' => 'Study and manage museums, cultural heritage, and collections.',
+                'content' => 'Museologists manage museum collections, curate exhibitions, preserve artefacts, and engage with public education. They work in museums, galleries, and cultural institutions.
+
+Educational paths: B.A. / M.A. in History, Archaeology, or Museology; M.A. / M.Phil. in Museology; certifications in conservation or heritage management.
+
+Top recruiters: Museums, galleries, cultural institutions, archaeological departments, heritage sites, and art foundations.
+
+Trending areas: Digital museums, virtual exhibitions, heritage conservation, and cultural tourism.',
+                'features' => [
+                    'Preserving and sharing cultural heritage',
+                    'Curatorial and educational roles',
+                    'Growing focus on cultural tourism',
+                    'Research and public engagement',
+                ],
+                'scope' => 'Museums, galleries, heritage sites, archaeological departments, and cultural institutions. Government and private funding support growth.',
+                'who_can_pursue' => 'Class 12 (any stream, Humanities preferred). Interest in history, art, and culture. M.A. in Museology or related field.',
+                'what_you_get' => 'Curator, museum educator, or heritage manager roles with opportunities to preserve and showcase cultural heritage.',
+            ],
+            [
+                'title' => 'International Relations',
+                'slug' => 'international-relations',
+                'order' => 25,
+                'short_description' => 'Study global politics, diplomacy, and international affairs.',
+                'content' => 'International relations professionals work in diplomacy, foreign policy, international organisations, and global business. They analyse global trends and facilitate cross-border cooperation.
+
+Educational paths: B.A. / M.A. in International Relations or Political Science; M.Phil. / Ph.D. for research; certifications in diplomacy or foreign policy.
+
+Top recruiters: Ministry of External Affairs, embassies, international organisations (UN, World Bank), MNCs, think tanks, and media.
+
+Trending areas: Global trade, climate diplomacy, international security, and multilateral cooperation.',
+                'features' => [
+                    'Foundation for civil services (IFS)',
+                    'Global career opportunities',
+                    'Understanding of world affairs',
+                    'Roles in diplomacy and international business',
+                ],
+                'scope' => 'Foreign service, international organisations, MNCs, think tanks, media, and research institutions.',
+                'who_can_pursue' => 'Class 12 (any stream). Interest in global affairs, history, and politics. Strong communication and analytical skills.',
+                'what_you_get' => 'Diplomat, foreign policy analyst, or international business consultant roles with global exposure and travel.',
+            ],
+            [
+                'title' => 'Film Making',
+                'slug' => 'film-making',
+                'order' => 26,
+                'short_description' => 'Create films, documentaries, and video content for entertainment and media.',
+                'content' => 'Filmmakers work as directors, producers, cinematographers, editors, and screenwriters. They create films, documentaries, web series, and video content.
+
+Educational paths: B.A. / M.A. in Film Studies or Mass Communication; Diploma in Film Making; courses from film institutes (FTII, SRFTI); practical experience.
+
+Top recruiters: Film production houses, OTT platforms, TV channels, ad agencies, independent filmmakers, and digital content creators.
+
+Trending areas: OTT content, web series, documentary filmmaking, and digital video production.',
+                'features' => [
+                    'Creative storytelling and visual expression',
+                    'Growing OTT and digital content market',
+                    'Freelance and project-based work',
+                    'Opportunities in films, TV, and digital media',
+                ],
+                'scope' => 'Film industry, OTT platforms, TV, advertising, and digital content. OTT boom creates more opportunities.',
+                'who_can_pursue' => 'Class 12 (any stream). Creativity, storytelling ability, and technical skills. Portfolio and practical experience matter.',
+                'what_you_get' => 'Director, producer, cinematographer, or editor roles with opportunities to create original content and build a portfolio.',
+            ],
         ];
 
         foreach ($careers as $data) {

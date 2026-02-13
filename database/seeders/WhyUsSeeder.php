@@ -9,7 +9,9 @@ class WhyUsSeeder extends Seeder
 {
     public function run(): void
     {
-        WhyUs::create([
+        WhyUs::updateOrCreate(
+            ['id' => 1],
+            [
             'title' => 'Shaping the Career Guidance Landscape',
             'intro_text' => 'Comprehensive career guidance solutions for students, parents, educators and schools',
             'items' => [
@@ -40,6 +42,7 @@ class WhyUsSeeder extends Seeder
             ],
             'conclusion_text' => 'Personalized, expert services & support for all stakeholders in the career guidance process.',
             'is_active' => true,
-        ]);
+            ]
+        );
     }
 }

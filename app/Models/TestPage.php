@@ -9,6 +9,7 @@ class TestPage extends Model
     protected $fillable = [
         'title',
         'slug',
+        'category',
         'short_description',
         'content',
         'hero_image',

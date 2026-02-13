@@ -49,8 +49,8 @@
                                             <img src="{{ $theme->getLogoUrl() }}" alt="Current Logo" style="max-height: 60px; max-width: 100%; object-fit: contain;">
                                         @else
                                             <div class="text-center" style="color: {{ $theme->header_text ?? '#fff' }};">
-                                                <div style="width: 50px; height: 50px; background: var(--primary-color, #FFC107); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
-                                                    <span style="font-weight: bold; font-size: 1.2rem; color: #000;">CM</span>
+                                                <div style="width: 50px; height: 50px; background: var(--primary-color, #14b8a6); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                                                    <span style="font-weight: bold; font-size: 1.2rem; color: #000;">PM</span>
                                                 </div>
                                                 <small class="d-block mt-2 opacity-75">Default Logo</small>
                                             </div>
@@ -132,8 +132,8 @@
                                         <label class="form-label fw-semibold">Primary Color</label>
                                         <small class="d-block text-muted mb-2">Buttons, links, highlights, accents</small>
                                         <div class="input-group">
-                                            <input type="color" class="form-control form-control-color color-picker" name="primary_color" value="{{ $theme->primary_color ?? '#FFC107' }}" data-preview="primary">
-                                            <input type="text" class="form-control color-text" value="{{ $theme->primary_color ?? '#FFC107' }}" data-for="primary_color" pattern="^#[0-9A-Fa-f]{6}$">
+                                            <input type="color" class="form-control form-control-color color-picker" name="primary_color" value="{{ $theme->primary_color ?? '#14b8a6' }}" data-preview="primary">
+                                            <input type="text" class="form-control color-text" value="{{ $theme->primary_color ?? '#14b8a6' }}" data-for="primary_color" pattern="^#[0-9A-Fa-f]{6}$">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -223,14 +223,14 @@
                                         <div class="col-md-4">
                                             <label class="form-label">Link Color <span class="text-muted">(auto)</span></label>
                                             <div class="input-group">
-                                                <input type="color" class="form-control form-control-color color-picker" name="link_color" value="{{ $theme->link_color ?? ($theme->primary_color ?? '#FFC107') }}">
+                                                <input type="color" class="form-control form-control-color color-picker" name="link_color" value="{{ $theme->link_color ?? ($theme->primary_color ?? '#14b8a6') }}">
                                                 <input type="text" class="form-control color-text" value="{{ $theme->link_color ?? '' }}" data-for="link_color" placeholder="Auto">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="form-label">Link Hover <span class="text-muted">(auto)</span></label>
                                             <div class="input-group">
-                                                <input type="color" class="form-control form-control-color color-picker" name="link_hover_color" value="{{ $theme->link_hover_color ?? '#E0A800' }}">
+                                                <input type="color" class="form-control form-control-color color-picker" name="link_hover_color" value="{{ $theme->link_hover_color ?? '#0d9488' }}">
                                                 <input type="text" class="form-control color-text" value="{{ $theme->link_hover_color ?? '' }}" data-for="link_hover_color" placeholder="Auto">
                                             </div>
                                         </div>
@@ -282,8 +282,8 @@
                                         <div class="col-md-6">
                                             <label class="form-label">Gradient Start</label>
                                             <div class="input-group">
-                                                <input type="color" class="form-control form-control-color color-picker" name="hero_gradient_start" value="{{ $theme->hero_gradient_start ?? '#FFD700' }}">
-                                                <input type="text" class="form-control color-text" value="{{ $theme->hero_gradient_start ?? '#FFD700' }}" data-for="hero_gradient_start">
+                                                <input type="color" class="form-control form-control-color color-picker" name="hero_gradient_start" value="{{ $theme->hero_gradient_start ?? '#14b8a6' }}">
+                                                <input type="text" class="form-control color-text" value="{{ $theme->hero_gradient_start ?? '#14b8a6' }}" data-for="hero_gradient_start">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -296,7 +296,7 @@
                                         <div class="col-md-6">
                                             <label class="form-label">Icon Color <span class="text-muted">(auto = primary)</span></label>
                                             <div class="input-group">
-                                                <input type="color" class="form-control form-control-color color-picker" name="icon_color" value="{{ $theme->icon_color ?? ($theme->primary_color ?? '#FFC107') }}">
+                                                <input type="color" class="form-control form-control-color color-picker" name="icon_color" value="{{ $theme->icon_color ?? ($theme->primary_color ?? '#14b8a6') }}">
                                                 <input type="text" class="form-control color-text" value="{{ $theme->icon_color ?? '' }}" data-for="icon_color" placeholder="Auto">
                                             </div>
                                         </div>
@@ -389,7 +389,7 @@
                                 <!-- Mini Footer Preview -->
                                 <div class="preview-footer" id="previewFooter">
                                     <div class="px-3 py-2 small">
-                                        <span>© 2026 Career Mapper</span>
+                                        <span>© 2026 The Psycho Math</span>
                                     </div>
                                 </div>
                             </div>
@@ -471,12 +471,12 @@
     top: 0;
     width: 50%;
     height: 100%;
-    background: linear-gradient(135deg, var(--preview-gradient-start, #FFD700) 0%, var(--preview-gradient-end, #000) 100%);
+    background: linear-gradient(135deg, var(--preview-gradient-start, #14b8a6) 0%, var(--preview-gradient-end, #000) 100%);
     opacity: 0.8;
 }
 
 .preview-btn {
-    background: var(--preview-primary, #FFC107) !important;
+    background: var(--preview-primary, #14b8a6) !important;
     color: var(--preview-button-text, #000) !important;
     border: none !important;
 }
@@ -504,18 +504,18 @@
 
 .preview-icon {
     font-size: 1.5rem;
-    color: var(--preview-icon, #FFC107);
+    color: var(--preview-icon, #14b8a6);
     display: block;
     margin-bottom: 5px;
 }
 
 .preview-link {
-    color: var(--preview-link, #FFC107);
+    color: var(--preview-link, #14b8a6);
     text-decoration: none;
 }
 
 .preview-link:hover {
-    color: var(--preview-link-hover, #E0A800);
+    color: var(--preview-link-hover, #0d9488);
 }
 
 .preview-footer {

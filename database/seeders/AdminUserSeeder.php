@@ -11,7 +11,7 @@ class AdminUserSeeder extends Seeder
     public function run(): void
     {
         User::firstOrCreate(
-            ['email' => 'admin@careermapper.com'],
+            ['email' => 'admin@thepsychomath.org'],
             [
                 'name' => 'Admin User',
                 'password' => Hash::make('admin123'), // Change this password after first login!

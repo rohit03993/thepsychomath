@@ -38,6 +38,7 @@ class TestPageController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'slug' => 'required|string|max:255|unique:test_pages,slug,' . $id,
+            'category' => 'required|string|in:psychological,aptitude,achievement,career,educational,social',
             'short_description' => 'nullable|string',
             'content' => 'nullable|string',
             'hero_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',

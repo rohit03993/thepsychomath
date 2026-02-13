@@ -14,6 +14,7 @@
                         <tr>
                             <th>Order</th>
                             <th>Title</th>
+                            <th>Category</th>
                             <th>Slug</th>
                             <th>Status</th>
                             <th>Actions</th>
@@ -24,6 +25,11 @@
                             <tr>
                                 <td>{{ $testPage->order }}</td>
                                 <td><strong>{{ $testPage->title }}</strong></td>
+                                <td>
+                                    <span class="badge {{ $testPage->category == 'psychological' ? 'bg-primary' : 'bg-info' }}">
+                                        {{ ucfirst($testPage->category ?? 'psychological') }}
+                                    </span>
+                                </td>
                                 <td><code>{{ $testPage->slug }}</code></td>
                                 <td>
                                     <span class="badge {{ $testPage->is_active ? 'bg-success' : 'bg-secondary' }}">

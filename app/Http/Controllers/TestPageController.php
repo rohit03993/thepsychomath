@@ -13,6 +13,7 @@ class TestPageController extends Controller
     public function index()
     {
         $testPages = TestPage::where('is_active', true)
+            ->where('category', 'psychological')
             ->orderBy('order')
             ->get();
         

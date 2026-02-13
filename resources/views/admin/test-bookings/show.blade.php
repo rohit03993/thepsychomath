@@ -99,7 +99,7 @@
                     <a href="tel:{{ $booking->contact_number }}" class="btn btn-primary">
                         <i class="bi bi-telephone-fill me-2"></i>Call {{ $booking->name }}
                     </a>
-                    <a href="mailto:{{ $booking->email }}?subject=Re: Test Booking - {{ $booking->testPage ? $booking->testPage->title : 'Career Mapper' }}" class="btn btn-info">
+                    <a href="mailto:{{ $booking->email }}?subject=Re: Test Booking - {{ $booking->testPage ? $booking->testPage->title : 'The Psycho Math' }}" class="btn btn-info">
                         <i class="bi bi-envelope-fill me-2"></i>Send Email
                     </a>
                     <a href="https://wa.me/{{ str_replace(['+', ' '], '', $booking->contact_number) }}" target="_blank" class="btn btn-success">

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', ($testPage->meta_title ?? $testPage->title) . ' - Career Mapper')
+@section('title', ($testPage->meta_title ?? $testPage->title) . ' - The Psycho Math')
 
 @section('content')
 

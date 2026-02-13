@@ -1,20 +1,20 @@
 @php
     $themeSettingsHeader = \App\Models\ThemeSetting::getActive();
     $logoUrl = $themeSettingsHeader && $themeSettingsHeader->logo_path ? $themeSettingsHeader->getLogoUrl() : null;
-    $logoAlt = $themeSettingsHeader && $themeSettingsHeader->logo_alt_text ? $themeSettingsHeader->logo_alt_text : 'Career Mapper';
+    $logoAlt = $themeSettingsHeader && $themeSettingsHeader->logo_alt_text ? $themeSettingsHeader->logo_alt_text : 'The Psycho Math';
 @endphp
 <header id="header" class="fixed-top">
     <div class="container">
         <h1 class="logo"><a href="{{ route('home') }}">
             @if($logoUrl)
                 <img src="{{ $logoUrl }}" alt="{{ $logoAlt }}" class="img-fluid logo-img" loading="eager" style="max-height: 50px; width: auto;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <span class="logo-text-fallback" style="display:none; width: 50px; height: 50px; background: var(--primary-color, #FFC107); border-radius: 50%; align-items: center; justify-content: center;">
-                    <span style="font-weight: bold; font-size: 1.2rem; color: var(--text-on-primary, #000);">CM</span>
+                <span class="logo-text-fallback" style="display:none; width: 50px; height: 50px; background: var(--primary-color, #14b8a6); border-radius: 50%; align-items: center; justify-content: center;">
+                    <span style="font-weight: bold; font-size: 1.2rem; color: var(--text-on-primary, #000);">PM</span>
                 </span>
             @else
-                {{-- Default CM logo --}}
-                <span class="logo-circle" style="width: 50px; height: 50px; background: var(--primary-color, #FFC107); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                    <span style="font-weight: bold; font-size: 1.2rem; color: var(--text-on-primary, #000);">CM</span>
+                {{-- Default PM logo --}}
+                <span class="logo-circle" style="width: 50px; height: 50px; background: var(--primary-color, #14b8a6); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <span style="font-weight: bold; font-size: 1.2rem; color: var(--text-on-primary, #000);">PM</span>
                 </span>
             @endif
         </a></h1>

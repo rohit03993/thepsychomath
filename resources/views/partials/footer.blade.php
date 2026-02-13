@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 footer-contact">
-                    <h3>Career Mapper</h3>
+                    <h3>The Psycho Math</h3>
                     <p>
                         @if($footerContact)
                             @if(!empty($footerContact->location))
@@ -77,7 +77,7 @@
     <div class="container d-md-flex py-4">
         <div class="me-md-auto text-center text-md-start">
             <div class="copyright">
-                &copy; Copyright <strong><span>Career Mapper</span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span>The Psycho Math</span></strong>. All Rights Reserved
             </div>
         </div>
     </div>

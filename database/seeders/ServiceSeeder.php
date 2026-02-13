@@ -9,7 +9,9 @@ class ServiceSeeder extends Seeder
 {
     public function run(): void
     {
-        Service::create([
+        Service::updateOrCreate(
+            ['id' => 1],
+            [
             'title' => 'Services',
             'subtitle' => 'Our Services / Assessment',
             'items' => [
@@ -55,6 +57,7 @@ class ServiceSeeder extends Seeder
                 ],
             ],
             'is_active' => true,
-        ]);
+            ]
+        );
     }
 }

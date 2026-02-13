@@ -141,7 +141,7 @@ class ThemeSetting extends Model
      */
     public function getCssVariables(): array
     {
-        $primary = $this->primary_color ?? '#FFC107';
+        $primary = $this->primary_color ?? '#14b8a6';
         $secondary = $this->secondary_color ?? '#000000';
         $background = $this->background_color ?? '#FFFFFF';
         $text = $this->text_color ?? '#333333';

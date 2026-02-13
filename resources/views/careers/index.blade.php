@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Career Library - Career Mapper')
+@section('title', 'Career Library - The Psycho Math')
 
 @section('content')
 

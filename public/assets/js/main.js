@@ -1,5 +1,5 @@
 /**
- * Career Mapper - Main JavaScript
+ * The Psycho Math - Main JavaScript
  */
 
 (function() {

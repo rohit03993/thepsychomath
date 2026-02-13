@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>@yield('title', 'Best Career Counselling in India - Career Mapper')</title>
+    <title>@yield('title', 'Best Career Counselling in India - The Psycho Math')</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 

@@ -32,6 +32,18 @@
                 </div>
             </div>
             <div class="mb-3">
+                <label for="category" class="form-label">Category <span class="text-danger">*</span></label>
+                <select class="form-control" id="category" name="category" required>
+                    <option value="psychological" {{ old('category', $testPage->category ?? 'psychological') == 'psychological' ? 'selected' : '' }}>Psychological</option>
+                    <option value="aptitude" {{ old('category', $testPage->category ?? 'psychological') == 'aptitude' ? 'selected' : '' }}>Aptitude</option>
+                    <option value="achievement" {{ old('category', $testPage->category ?? 'psychological') == 'achievement' ? 'selected' : '' }}>Achievement</option>
+                    <option value="career" {{ old('category', $testPage->category ?? 'psychological') == 'career' ? 'selected' : '' }}>Career</option>
+                    <option value="educational" {{ old('category', $testPage->category ?? 'psychological') == 'educational' ? 'selected' : '' }}>Educational</option>
+                    <option value="social" {{ old('category', $testPage->category ?? 'psychological') == 'social' ? 'selected' : '' }}>Social</option>
+                </select>
+                <small class="text-muted">Select the test category. Only "Psychological" tests will appear on the /tests page.</small>
+            </div>
+            <div class="mb-3">
                 <label for="short_description" class="form-label">Short Description</label>
                 <textarea class="form-control" id="short_description" name="short_description" rows="2">{{ old('short_description', $testPage->short_description) }}</textarea>
             </div>

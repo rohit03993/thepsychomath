@@ -22,7 +22,7 @@ class HomeController extends Controller
         $aboutUs = AboutUs::where('is_active', true)->first();
         $whyUs = WhyUs::where('is_active', true)->first();
         $feature = Feature::where('is_active', true)->first();
-        $clients = Client::active()->get()->unique('id');
+        $clients = Client::active()->get()->unique('name')->values();
         $service = Service::where('is_active', true)->first();
         $portfolioItems = PortfolioItem::with('category')->active()->get()->unique('id');
         $portfolioCategories = PortfolioCategory::active()->get()->unique('slug');

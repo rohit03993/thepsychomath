@@ -12,9 +12,9 @@
         }
     }
 
-    // Special handling for All Test dropdown - load test pages dynamically
-    $isAllTest = strtolower($item->title) === 'all test' || strtolower($item->title) === 'all tests' || strtolower($item->title) === 'tests';
-    if ($isAllTest && $isDropdown) {
+    // Special handling for Test dropdown - load test pages dynamically (if no children)
+    $isTest = strtolower($item->title) === 'test' || strtolower($item->title) === 'tests';
+    if ($isTest && $isDropdown && !$hasChildren) {
         try {
             $allTestPages = \App\Models\TestPage::where('is_active', true)->orderBy('order')->get();
         } catch (\Exception $e) {
@@ -60,9 +60,9 @@
     </a>
     
     @if($isDropdown)
-        <ul class="{{ ($isCareers || $isAllTest) ? 'dropdown-scrollable' : '' }}">
-            @if($isAllTest && isset($allTestPages))
-                {{-- Dynamic All Test dropdown --}}
+        <ul class="{{ ($isCareers || ($isTest && isset($allTestPages))) ? 'dropdown-scrollable' : '' }}">
+            @if($isTest && isset($allTestPages) && !$hasChildren)
+                {{-- Dynamic Test dropdown (fallback if no children) --}}
                 @foreach($allTestPages as $testPage)
                     <li><a href="{{ route('test-pages.show', $testPage->slug) }}">{{ $testPage->title }}</a></li>
                 @endforeach

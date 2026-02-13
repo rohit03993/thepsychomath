@@ -1,5 +1,5 @@
 /**
- * Career Mapper - Complete Stylesheet
+ * The Psycho Math - Complete Stylesheet
  * Dynamic theme support - colors injected via PHP
  * 
  * SMART CONTRAST SYSTEM:
@@ -10,13 +10,13 @@
 
 :root {
   /* Core theme colors - will be overridden by dynamic theme */
-  --primary-color: #FFC107;
+  --primary-color: #14b8a6;
   --secondary-color: #000000;
   --bg-color: #FFFFFF;
   --text-color: #333333;
   
   /* Auto-calculated contrast colors */
-  --text-on-primary: #000000;      /* Text on primary color buttons */
+  --text-on-primary: #ffffff;      /* Text on primary color buttons (white on teal) */
   --text-on-secondary: #ffffff;    /* Text on dark backgrounds */
   --text-on-light: #333333;        /* Text on light backgrounds */
   --text-on-dark: #ffffff;         /* Text on dark backgrounds */
@@ -489,7 +489,7 @@ a {
 }
 
 .mobile-nav-toggle:hover {
-  color: var(--yellow-accent, #FFC107);
+  color: var(--yellow-accent, #14b8a6);
   transform: scale(1.05);
 }
 

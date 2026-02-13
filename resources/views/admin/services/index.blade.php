@@ -27,7 +27,7 @@
                         <div class="col-md-3 mb-3">
                             <div class="card">
                                 <div class="card-body text-center">
-                                    <i class="{{ $item['icon'] ?? '' }}" style="font-size: 2rem; color: #FFD700;"></i>
+                                    <i class="{{ $item['icon'] ?? '' }}" style="font-size: 2rem; color: #14b8a6;"></i>
                                     <h6 class="mt-2">{{ $item['title'] ?? '' }}</h6>
                                 </div>
                             </div>

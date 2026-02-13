@@ -16,7 +16,10 @@ class PortfolioCategorySeeder extends Seeder
         ];
 
         foreach ($categories as $category) {
-            PortfolioCategory::create(array_merge($category, ['is_active' => true]));
+            PortfolioCategory::firstOrCreate(
+                ['slug' => $category['slug']],
+                array_merge($category, ['is_active' => true])
+            );
         }
     }
 }

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'All Tests - Career Mapper')
+@section('title', 'Psychological Assessment Tests - The Psycho Math')
 
 @section('content')
 
@@ -9,8 +9,8 @@
     <div class="container" data-aos="fade-up">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <h1 class="text-white mb-4" style="font-size: 3.5rem; font-weight: 700;">All Career Assessment Tests</h1>
-                <p class="lead text-white" style="font-size: 1.3rem; opacity: 0.9;">Discover your potential with our comprehensive range of psychometric assessments</p>
+                <h1 class="text-white mb-4" style="font-size: 3.5rem; font-weight: 700;">Psychological Assessment Tests</h1>
+                <p class="lead text-white" style="font-size: 1.3rem; opacity: 0.9;">Discover your potential with our comprehensive range of psychological assessments</p>
             </div>
         </div>
     </div>

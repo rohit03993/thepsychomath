@@ -9,7 +9,9 @@ class FeatureSeeder extends Seeder
 {
     public function run(): void
     {
-        Feature::create([
+        Feature::updateOrCreate(
+            ['id' => 1],
+            [
             'title' => 'Features',
             'subtitle' => null,
             'items' => [
@@ -35,6 +37,7 @@ class FeatureSeeder extends Seeder
                 ],
             ],
             'is_active' => true,
-        ]);
+            ]
+        );
     }
 }

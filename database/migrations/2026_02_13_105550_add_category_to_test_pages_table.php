@@ -11,9 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('theme_settings', function (Blueprint $table) {
-            $table->string('logo_path')->nullable()->after('preset_name');
-            $table->string('logo_alt_text')->default('The Psycho Math')->after('logo_path');
+        Schema::table('test_pages', function (Blueprint $table) {
+            $table->string('category')->default('psychological')->after('slug');
         });
     }
 
@@ -22,8 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('theme_settings', function (Blueprint $table) {
-            $table->dropColumn(['logo_path', 'logo_alt_text']);
+        Schema::table('test_pages', function (Blueprint $table) {
+            $table->dropColumn('category');
         });
     }
 };

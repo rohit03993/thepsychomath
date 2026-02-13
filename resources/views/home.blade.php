@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Best Career Counselling in India - Career Mapper')
+@section('title', 'Best Career Counselling in India - The Psycho Math')
 
 @section('content')
 
@@ -15,7 +15,7 @@
                     <a href="{{ route('grade-pages.show', 'class-8-9') }}" class="card-link">
                         <div class="card">
                             <div class="card-logo">
-                                <div class="logo-badge">CM</div>
+                                <div class="logo-badge">PM</div>
                             </div>
                             <i class="ri-book-open-line"></i>
                             <p>Class 8-9</p>
@@ -24,7 +24,7 @@
                     <a href="{{ route('grade-pages.show', 'class-10-12') }}" class="card-link">
                         <div class="card">
                             <div class="card-logo">
-                                <div class="logo-badge">CM</div>
+                                <div class="logo-badge">PM</div>
                             </div>
                             <i class="ri-bar-chart-line"></i>
                             <p>Class 10-12</p>
@@ -33,7 +33,7 @@
                     <a href="{{ route('grade-pages.show', 'college-graduates') }}" class="card-link">
                         <div class="card">
                             <div class="card-logo">
-                                <div class="logo-badge">CM</div>
+                                <div class="logo-badge">PM</div>
                             </div>
                             <i class="ri-calendar-line"></i>
                             <p>College and Graduates</p>
@@ -57,7 +57,7 @@
         <div class="row content">
             <div class="col-lg-6">
                 <p>
-                    {{ $aboutUs->left_column_text ?? 'At CAREER MAPPER, we are dedicated to providing structured career counseling services tailored specifically for underprivileged students and those in government schools across the state—ensuring they receive the same opportunities as their peers in private institutions.' }}
+                    {{ $aboutUs->left_column_text ?? 'At THE PSYCHO MATH, we are dedicated to providing structured career counseling services tailored specifically for underprivileged students and those in government schools across the state—ensuring they receive the same opportunities as their peers in private institutions.' }}
                 </p>
                 @if($aboutUs && $aboutUs->features)
                     <ul>
@@ -190,8 +190,8 @@
             @else
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
                     <div class="client-logo">
-                        <div class="logo-circle">CM</div>
-                        <div class="logo-text">Career Mapper</div>
+                        <div class="logo-circle">PM</div>
+                        <div class="logo-text">The Psycho Math</div>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
@@ -247,8 +247,8 @@
                 @else
                     <div class="swiper-slide">
                         <div class="client-logo">
-                            <div class="logo-circle">CM</div>
-                            <div class="logo-text">Career Mapper</div>
+                            <div class="logo-circle">PM</div>
+                            <div class="logo-text">The Psycho Math</div>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -721,14 +721,14 @@
                     <p>{{ $whyChooseUs->paragraph_1 }}</p>
                 @else
                     <p>
-                        At CAREER MAPPER, we are dedicated to providing structured career counseling services tailored specifically for underprivileged students and those in government schools across the state—ensuring they receive the same opportunities as their peers in private institutions. Our scientifically designed psychometric tests assess students' aptitudes, interests, and skills, delivering personalized career guidance aligned with the National Education Policy (NEP) 2020. By integrating psychometric analysis with skill development, we bridge the gap between education and career readiness, empowering students to make informed decisions about their future. Our mission is to ensure that every student, regardless of their background, has access to the right guidance and opportunities to build a successful and fulfilling career.
+                        At THE PSYCHO MATH, we are dedicated to providing structured career counseling services tailored specifically for underprivileged students and those in government schools across the state—ensuring they receive the same opportunities as their peers in private institutions. Our scientifically designed psychometric tests assess students' aptitudes, interests, and skills, delivering personalized career guidance aligned with the National Education Policy (NEP) 2020. By integrating psychometric analysis with skill development, we bridge the gap between education and career readiness, empowering students to make informed decisions about their future. Our mission is to ensure that every student, regardless of their background, has access to the right guidance and opportunities to build a successful and fulfilling career.
                     </p>
                 @endif
                 @if(isset($whyChooseUs) && $whyChooseUs->paragraph_2)
                     <p>{{ $whyChooseUs->paragraph_2 }}</p>
                 @else
                     <p>
-                        At Career Mapper, we are honored to support the children of martyrs from all three Indian Armed Forces by providing free* career counseling services. Our approach is rooted in scientifically designed psychometric tests that assess students' aptitudes, interests, and skills, ensuring personalized career guidance aligned with the *National Education Policy (NEP) 2020. By integrating psychometric analysis with *skill development, we empower these students to make well-informed career choices that align with their strengths and aspirations. Additionally, we prioritize *mental health care*, offering emotional support to help them navigate their future with confidence and resilience. Our mission is to honor the sacrifices of our brave soldiers by equipping their children with the right guidance, opportunities, and well-being to build a successful and fulfilling future.
+                        At The Psycho Math, we are honored to support the children of martyrs from all three Indian Armed Forces by providing free* career counseling services. Our approach is rooted in scientifically designed psychometric tests that assess students' aptitudes, interests, and skills, ensuring personalized career guidance aligned with the *National Education Policy (NEP) 2020. By integrating psychometric analysis with *skill development, we empower these students to make well-informed career choices that align with their strengths and aspirations. Additionally, we prioritize *mental health care*, offering emotional support to help them navigate their future with confidence and resilience. Our mission is to honor the sacrifices of our brave soldiers by equipping their children with the right guidance, opportunities, and well-being to build a successful and fulfilling future.
                     </p>
                 @endif
             </div>
@@ -966,7 +966,7 @@
                     <div class="email mt-4">
                         <i class="bi bi-envelope"></i>
                         <h4>Email:</h4>
-                        <p>{{ isset($contactInfo) && $contactInfo->email ? $contactInfo->email : 'careermappers4u@gmail.com' }}</p>
+                        <p>{{ isset($contactInfo) && $contactInfo->email ? $contactInfo->email : 'info@thepsychomath.org' }}</p>
                     </div>
                     
                     <div class="phone mt-4">

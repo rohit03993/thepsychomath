@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login - Career Mapper</title>
+    <title>Admin Login - The Psycho Math</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
     <style>
@@ -31,13 +31,13 @@
             font-weight: 700;
         }
         .btn-primary {
-            background: #FFD700;
+            background: #14b8a6;
             border: none;
             color: #212529;
             font-weight: 600;
         }
         .btn-primary:hover {
-            background: #FFC107;
+            background: #14b8a6;
         }
     </style>
 </head>
@@ -45,7 +45,7 @@
     <div class="login-card">
         <div class="login-header">
             <h2><i class="bi bi-shield-lock"></i> Admin Login</h2>
-            <p class="text-muted">Career Mapper Admin Panel</p>
+            <p class="text-muted">The Psycho Math Admin Panel</p>
         </div>
         
         @if($errors->any())

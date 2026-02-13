@@ -305,6 +305,32 @@ a {
   pointer-events: none;
 }
 
+/* Scrollable dropdown for long menus (Careers, All Test) */
+#navbar .dropdown > ul.dropdown-scrollable {
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar styling for dropdown */
+#navbar .dropdown > ul.dropdown-scrollable::-webkit-scrollbar {
+  width: 8px;
+}
+
+#navbar .dropdown > ul.dropdown-scrollable::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+#navbar .dropdown > ul.dropdown-scrollable::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+#navbar .dropdown > ul.dropdown-scrollable::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 /* Create invisible bridge using padding-top to eliminate gap */
 #navbar .dropdown > ul::before {
   content: '';

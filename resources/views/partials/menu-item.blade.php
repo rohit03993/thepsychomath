@@ -60,7 +60,7 @@
     </a>
     
     @if($isDropdown)
-        <ul>
+        <ul class="{{ ($isCareers || $isAllTest) ? 'dropdown-scrollable' : '' }}">
             @if($isAllTest && isset($allTestPages))
                 {{-- Dynamic All Test dropdown --}}
                 @foreach($allTestPages as $testPage)

@@ -20,6 +20,87 @@ class TestPageController extends Controller
     }
 
     /**
+     * Show the form for creating a new test page.
+     */
+    public function create()
+    {
+        return view('admin.test-pages.create');
+    }
+
+    /**
+     * Store a newly created test page in storage.
+     */
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'title' => 'required|string|max:255',
+            'slug' => 'required|string|max:255|unique:test_pages,slug',
+            'short_description' => 'nullable|string',
+            'content' => 'nullable|string',
+            'hero_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'featured_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'features' => 'nullable|array',
+            'features.*' => 'nullable|string',
+            'test_details_key' => 'nullable|array',
+            'test_details_value' => 'nullable|array',
+            'who_can_take' => 'nullable|string',
+            'what_you_get' => 'nullable|string',
+            'meta_title' => 'nullable|string|max:255',
+            'meta_description' => 'nullable|string',
+            'order' => 'nullable|integer|min:0',
+            'is_active' => 'boolean',
+        ]);
+
+        // Handle hero image upload
+        if ($request->hasFile('hero_image')) {
+            $validated['hero_image'] = $request->file('hero_image')->store('test-pages', 'public');
+        }
+
+        // Handle featured image upload
+        if ($request->hasFile('featured_image')) {
+            $validated['featured_image'] = $request->file('featured_image')->store('test-pages', 'public');
+        }
+
+        // Process features array (remove empty values)
+        if (isset($validated['features'])) {
+            $validated['features'] = array_values(array_filter($validated['features'], function ($item) {
+                return !empty(trim($item));
+            }));
+        }
+
+        // Process test_details from form (test_details_key[] and test_details_value[])
+        if ($request->has('test_details_key') && $request->has('test_details_value')) {
+            $testDetails = [];
+            $keys = $request->input('test_details_key', []);
+            $values = $request->input('test_details_value', []);
+
+            foreach ($keys as $index => $key) {
+                $key = trim($key);
+                $value = isset($values[$index]) ? trim($values[$index]) : '';
+                if (!empty($key) && !empty($value)) {
+                    $testDetails[$key] = $value;
+                }
+            }
+            $validated['test_details'] = $testDetails;
+        }
+
+        // Default order to next position if not provided
+        if (!isset($validated['order'])) {
+            $maxOrder = TestPage::max('order') ?? 0;
+            $validated['order'] = $maxOrder + 1;
+        }
+
+        // Force category to psychological for all new tests
+        $validated['category'] = 'psychological';
+        $validated['is_active'] = $request->has('is_active');
+
+        TestPage::create($validated);
+
+        return redirect()->route('admin.test-pages.index')
+            ->with('success', 'Test page created successfully!');
+    }
+
+    /**
      * Show the form for editing the specified test page.
      */
     public function edit($id)
@@ -38,7 +119,6 @@ class TestPageController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'slug' => 'required|string|max:255|unique:test_pages,slug,' . $id,
-            'category' => 'required|string|in:psychological,aptitude,achievement,career,educational,social',
             'short_description' => 'nullable|string',
             'content' => 'nullable|string',
             'hero_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
@@ -110,6 +190,8 @@ class TestPageController extends Controller
             $validated['test_details'] = $testPage->test_details;
         }
 
+        // Keep all tests as psychological category
+        $validated['category'] = 'psychological';
         $validated['is_active'] = $request->has('is_active');
 
         $testPage->update($validated);

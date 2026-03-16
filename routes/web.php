@@ -119,6 +119,8 @@ Route::prefix('admin')->group(function () {
 
             // Test Pages Routes
             Route::get('/test-pages', [\App\Http\Controllers\Admin\TestPageController::class, 'index'])->name('admin.test-pages.index');
+            Route::get('/test-pages/create', [\App\Http\Controllers\Admin\TestPageController::class, 'create'])->name('admin.test-pages.create');
+            Route::post('/test-pages', [\App\Http\Controllers\Admin\TestPageController::class, 'store'])->name('admin.test-pages.store');
             Route::get('/test-pages/{id}/edit', [\App\Http\Controllers\Admin\TestPageController::class, 'edit'])->name('admin.test-pages.edit');
             Route::put('/test-pages/{id}', [\App\Http\Controllers\Admin\TestPageController::class, 'update'])->name('admin.test-pages.update');
 

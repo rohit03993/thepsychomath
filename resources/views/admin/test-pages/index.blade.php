@@ -3,6 +3,9 @@
 @section('content')
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2>Test Pages</h2>
+    <a href="{{ route('admin.test-pages.create') }}" class="btn btn-primary">
+        <i class="bi bi-plus-circle"></i> Add New Test Page
+    </a>
 </div>
 
 @if($testPages->count() > 0)
